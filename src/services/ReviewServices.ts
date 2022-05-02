@@ -9,11 +9,3 @@ export const getAllReviews = async () => {
 	const res = await axios.get("/reviews");
 	return res.data;
 };
-// export const updateReview = async (values: ReviewI) => {
-// 	const res = await axios.put(`/reviews/${values._id}`, values);
-// 	return res.data;
-// };
-// export const deleteReview = async (id: string) => {
-// 	const res = await axios.delete(`/reviews/${id}`);
-// 	return res.data;
-// };
