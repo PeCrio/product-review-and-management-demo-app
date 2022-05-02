@@ -12,7 +12,7 @@
 
 ## Preview
 
-This applicaiton is currently deployed on vercel, a demo preview can be seen on this [Preview Link](https://vercel.com/product-review-and-management-demo-app)
+This applicaiton is currently deployed on vercel, a demo preview can be seen on this [Preview Link](https://product-review-and-management-demo-app.vercel.app)
 ![App Preview](public/images/app-preview.png)
 
 ## Tools and technologies
