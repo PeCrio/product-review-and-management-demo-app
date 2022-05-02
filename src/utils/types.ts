@@ -5,5 +5,5 @@ export interface ReviewI {
 	email: string;
 	rating: ReviewRatingI;
 	comment: string;
-	id?: string;
+	_id?: string;
 }
