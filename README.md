@@ -10,67 +10,82 @@
 - Customer can create feedback by entering their name, email, rating and comment
 - Display product performance based on the reviews by showing a graphical preview in a chart format and the percentage of reviews above 2.
 
+## Upcoming features
+
+- Paginate records for reviews.
+- Application logging with tools like [Sentry](https://sentry.io) and [Hotjar](https://hotjar.org)
+- [CircleCI](https://circleci.org) for Continous integration
+- [Husky](https://husky.org) for running pre-commit tests before pushing code to SCM's like [GitHub](https://github.com)
+
 ## Preview
 
-This applicaiton is currently deployed on vercel, a demo preview can be seen on this [Preview Link](https://product-review-and-management-demo-app.vercel.app)
+This applicaiton is currently deployed on [vercel](https://vercel.com), a demo preview can be seen on this [Preview Link](https://product-review-and-management-demo-app.vercel.app)
+
 ![App Preview](public/images/app-preview.png)
 
 ## Tools and technologies
 
 Below are the main tools and technologies used in this project:
 
-- [NextJS](https://nextjs.org)
-- [ReactJS](https://reactjs.org)
-- [Cypress](https://cypress.io)
-- [ChakraUI](https://chakra-ui.com)
-- [ESLint](https://eslint.org)
-- [TypeScript](https://typescriptlang.org)
-- [Formik](https://formik.org)
-- [Axios](https://axios-http.org)
-- [Chart.js](https://chartjs.org)
-- [Mongoose](https://mongoosejs.com)
+- [NextJS](https://nextjs.org) - UI Framework
+- [ReactJS](https://reactjs.org) - Frontend UI library
+- [Cypress](https://cypress.io) - E2E, integration and unit tests
+- [ChakraUI](https://chakra-ui.com) - Design system, theming and accessibility
+- [ESLint](https://eslint.org) - Linting
+- [TypeScript](https://typescriptlang.org) - Type checking
+- [Formik](https://formik.org) - Form validation
+- [Axios](https://axios-http.org) - HTTP requests
+- [Chart.js](https://chartjs.org) - Data representation package (e.g. Charts, graph)
+- [Mongoose](https://mongoosejs.com) - NoSQL Database
+- [Google Analytics](https://analytics.google.com) - Metrics and usage
 
 ## Getting Started
 
-1. ### Setup environment variables
-   - Create a `.env` file in the root directory of the project
+1. ## Setup environment variables
+   - Create a `.env` file at the root directory of the project
    - Copy the content of the `.env.example` file onto it
-   - Update the values as required. e.g. `API_URL=https://localhost:3000/api`
-2. ### Install packages and start server
+   - Update the values as required. e.g. `API_URL=http://localhost:3000/api`
+2. ## Development and Testing
 
-   > Before proceeding to the next section, kindly ensure that your terminal window is on the right directory, you can use the below helper commands to check/confirm:
+   ## Notes
+
+   > Before proceeding with this section, kindly ensure that your terminal window is open on the root directory of the project, you can use the below helper commands to check/confirm:
 
    - `cd` command to change directory e.g. `cd path/to/project`
    - `pwd` command to check your "print working directory"
    - `ls` command to show the content of your current directory
 
-   > By default the `dev` script will run on port `3000`, if by chance you have another application making use of that port on your machine, you can either terminate that process/application or use the `--port` flag where necessary to change the running port, kindly remember to update any relative script found in the `package.json` file as well, e.g. the `develop` script.
+   By default the `dev` script runs on port `3000`, if you have another application making use of that port on your machine, you can either terminate that process/application or use the `--port` flag where necessary to change the running port, kindly remember to update any relative script found on the project e.g. the `package.json` and `Dockerfile`.
 
-   #### Development Commands
+   ## Running locally
 
    ```bash
    # Step 1: Install dependencies
-   npm install
+   $ npm install
 
-   # Step 2: Test environment setup and cleanup for code coverage
-   npm run predev:instrumented
+   # Step 2: Run Nextjs and cypress in interactive mode concurrently
+   $ npm run develop
+   ```
 
-   # Step 3: Run instrument test environment for code coverage
-   npm run dev:instrumented
+   ## Extra notes
 
-   # Step 4: Stop the server e.g. with `Ctrl + C`
+   Other commands can be found on the `package.json` file in the root directory of the project.
 
-   # Step 5:
-   # Run Nextjs development server and cypress testing environment concurrently
-   npm run develop
+   ## Viewing test coverage
 
-   # Viewing test coverage
+   > Please note that you need to have run the cypress tests at least once before a report can be generated which would be located here: `coverage/lcov-report/index.html`, you can directly open it by navigating to the folder or via your terminal with the below command:
 
-   # Note: Please note that you need to have run the cypress test at least once before the report can be generated which is located here: coverage/lcov-report/index.html, alternatively, you can directly open it from your terminal with the below command:
-   open coverage/lcov-report/index.html
+   ```bash
+   $ open coverage/lcov-report/index.html
+   ```
 
-   # Other commands can be found on the package.json file in the root directory of the project e.g. for running the NextJS development server only or the cypress test environment only
+   ## Using Docker
 
+   > Before proceeding with the below command, ensure [Docker](https://docs.docker.com/get-docker/) is installed and running on your machine.
+
+   ```bash
+   # Runs Nextjs within a docker container
+   $ docker-compose up
    ```
 
 ## Author
@@ -83,7 +98,7 @@ Below are the main tools and technologies used in this project:
 - [Dribbble](https://www.dribbble.com/PeCrio)
 - [Email](mailto:theossaiprecious@gmail.com)
 
-### Inspiration
+## Inspiration
 
 - [checkout.com](https://www.checkout.com)
 
