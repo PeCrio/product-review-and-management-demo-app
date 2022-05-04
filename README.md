@@ -1,5 +1,7 @@
 # Product Review and management demo app
 
+[![CircleCI](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main.svg?style=svg)](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main)
+
 ## Introduction
 
 > A customer feedback demo application for collecting reviews for a product after a successful purchase.
