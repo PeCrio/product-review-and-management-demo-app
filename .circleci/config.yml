@@ -10,4 +10,4 @@ workflows:
           no-workspace: true
           post-steps:
             - store_artifacts:
-                path: coverage
+                path: coverage/lcov-report
