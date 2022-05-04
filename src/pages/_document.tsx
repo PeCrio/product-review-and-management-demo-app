@@ -33,6 +33,22 @@ export default class Document extends NextDocument {
 					/>
 					<link rel="manifest" href="/site.webmanifest"></link>
 					<meta property="og:image" content="/images/app-review.png" />
+					<script
+						async
+						src={`https://www.googletagmanager.com/gtag/js?id=G-ZSEBJQ4Q8K`}
+					/>
+					<script
+						dangerouslySetInnerHTML={{
+							__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZSEBJQ4Q8K', {
+              page_path: window.location.pathname,
+            });
+          `,
+						}}
+					/>
 				</Head>
 				<body>
 					<ColorModeScript />
