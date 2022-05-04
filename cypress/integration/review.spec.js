@@ -6,11 +6,11 @@ import {
 
 context("Tests for review form", () => {
 	before(() => {
-		cy.visit("/");
+		cy.visit("http://localhost:3000");
 	});
 
 	it("Can fetch reviews from API", () => {
-		cy.request(Cypress.env("API_URL") + "/reviews").should(
+		cy.request("http://localhost:3000/api/reviews").should(
 			"have.property",
 			"status",
 			200
