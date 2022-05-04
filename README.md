@@ -14,7 +14,6 @@
 
 - Paginate records for reviews.
 - Application logging with tools like [Sentry](https://sentry.io) and [Hotjar](https://hotjar.org)
-- [CircleCI](https://circleci.org) for Continous integration
 - [Husky](https://husky.org) for running pre-commit tests before pushing code to SCM's like [GitHub](https://github.com)
 
 ## Preview
@@ -38,6 +37,8 @@ Below are the main tools and technologies used in this project:
 - [Chart.js](https://chartjs.org) - Data representation package (e.g. Charts, graph)
 - [Mongoose](https://mongoosejs.com) - NoSQL Database
 - [Google Analytics](https://analytics.google.com) - Metrics and usage
+- [CircleCI](https://circleci.com) - Continous Integration
+- [Docker](https://docker.com) - Containerisation
 
 ## Getting Started
 
