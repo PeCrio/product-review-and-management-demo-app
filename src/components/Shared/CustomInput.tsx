@@ -6,6 +6,7 @@ import {
 	InputProps,
 	Textarea,
 	TextareaProps,
+	Box,
 } from "@chakra-ui/react";
 import { Field, FieldProps as FormikFieldProps } from "formik";
 import React from "react";
@@ -20,7 +21,11 @@ interface CustomInputProps {
 	type?: FieldType;
 }
 function CustomInput({ fieldProps, label, name, type }: CustomInputProps) {
-	const pickFormField = ({ formikProps }: { formikProps }) => {
+	const pickFormField = ({
+		formikProps,
+	}: {
+		formikProps: FormikFieldProps | any;
+	}) => {
 		const { field } = formikProps;
 		switch (type) {
 			case "textarea":
@@ -50,7 +55,11 @@ function CustomInput({ fieldProps, label, name, type }: CustomInputProps) {
 						<FormControl isInvalid={isInvalid}>
 							<FormLabel mb="1" fontSize="sm" color="gray.500">
 								{label}
-								{fieldProps.isRequired && <span>*</span>}
+								{fieldProps?.isRequired && (
+									<Box as="span" color="red">
+										*
+									</Box>
+								)}
 							</FormLabel>
 							{pickFormField({
 								formikProps,

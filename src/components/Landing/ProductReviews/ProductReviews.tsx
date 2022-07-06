@@ -9,8 +9,17 @@ import {
 	Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { ReviewI } from "utils/types";
 
-function ProductReviews({ reviews = [], loading = false }) {
+interface ProductReviewsProps {
+	reviews: ReviewI[];
+	loading: boolean;
+}
+
+function ProductReviews({
+	reviews = [],
+	loading = false,
+}: ProductReviewsProps): JSX.Element {
 	return (
 		<Box id="review-grid">
 			{loading ? (
