@@ -1,10 +1,11 @@
 import dbConnect from "utils/db/dbConnect";
 import Review from "utils/db/models/Review";
 import { ReviewI } from "utils/types";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 dbConnect();
 
-const reviewHandler = async (req, res) => {
+const reviewHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { method } = req;
 	switch (method) {
 		case "GET":

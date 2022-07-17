@@ -16,7 +16,7 @@ import { StarIcon } from "@chakra-ui/icons";
 import { ReviewI, ReviewRatingI } from "utils/types";
 interface ReviewFormProps {
 	initialValues?: ReviewI;
-	onSubmit?: (
+	onSubmit: (
 		values: ReviewI,
 		formikHelpers: FormikHelpers<ReviewI>
 	) => void | Promise<any>;
@@ -41,7 +41,7 @@ function ReviewForm({
 			.required("Rating is required"),
 		comment: Yup.string().required("Your feedback is required"),
 	});
-	const stars: ReviewRatingI[] = [1, 2, 3, 4, 5];
+	const stars: Readonly<ReviewRatingI[]> = [1, 2, 3, 4, 5];
 	return (
 		<Formik
 			initialValues={initialValues}

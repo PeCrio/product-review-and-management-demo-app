@@ -34,7 +34,7 @@ const Index = () => {
 			setSubmitting(true);
 			setLoading(true);
 			const res = await createReview(values);
-			const newReview: ReviewI = res.data;
+			const newReview = res.data;
 			setReviews((prevValues) => [newReview, ...prevValues]);
 			description = "Review created successfully";
 			resetForm();
