@@ -14,6 +14,7 @@ import {
 	getPercentageOfRatingsGreaterThanTwo,
 	getReviewSummary,
 } from "utils/helpers";
+import { ReviewI } from "utils/types";
 
 ChartJS.register(
 	CategoryScale,
@@ -23,14 +24,21 @@ ChartJS.register(
 	Tooltip,
 	Legend
 );
-function ProductReviewPerformance({ reviews = [], loading = false }) {
+interface ProductReviewPerformanceProps {
+	reviews: ReviewI[];
+	loading: boolean;
+}
+function ProductReviewPerformance({
+	reviews = [],
+	loading = false,
+}: ProductReviewPerformanceProps): JSX.Element {
 	const handleReviewSummary = () => getReviewSummary(reviews);
 	const countData = {
-		labels: Object.keys(handleReviewSummary()).map((key) => key),
+		labels: Object.keys(handleReviewSummary()),
 		datasets: [
 			{
 				label: "No. of reviews",
-				data: Object.values(handleReviewSummary()).map((value) => value),
+				data: Object.values(handleReviewSummary()),
 				backgroundColor: "#54DDE2",
 				hoverBackgroundColor: "#54DDE2",
 			},

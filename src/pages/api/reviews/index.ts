@@ -1,10 +1,11 @@
 import dbConnect from "utils/db/dbConnect";
 import Review from "utils/db/models/Review";
 import { ReviewI } from "utils/types";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 dbConnect();
 
-const reviewHandler = async (req, res) => {
+const reviewHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { method } = req;
 	switch (method) {
 		case "GET":
@@ -40,9 +41,16 @@ const reviewHandler = async (req, res) => {
 					.status(201)
 					.json({ success: true, data: newReview, message: "Record created" });
 			} catch (error) {
+				if(error instanceof Error) {
+					res.status(400).json({
+						success: false,
+						message: error.message
+					});
+				}
+
 				res.status(400).json({
 					success: false,
-					message: error?.message ?? "Invalid request",
+					message: "Invalid request",
 				});
 			}
 			break;
