@@ -41,9 +41,16 @@ const reviewHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 					.status(201)
 					.json({ success: true, data: newReview, message: "Record created" });
 			} catch (error) {
+				if(error instanceof Error) {
+					res.status(400).json({
+						success: false,
+						message: error.message
+					});
+				}
+
 				res.status(400).json({
 					success: false,
-					message: error?.message ?? "Invalid request",
+					message: "Invalid request",
 				});
 			}
 			break;
