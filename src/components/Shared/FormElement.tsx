@@ -2,14 +2,13 @@ import {
   FormControl,
   FormErrorMessage,
   FormLabel,
-  Input,
   InputProps as ChakraInputProps,
-  Textarea,
   TextareaProps as ChakraTextareaProps,
   Box,
 } from "@chakra-ui/react";
 import { Field, FieldProps as FormikFieldProps } from "formik";
 import React from "react";
+import FormElementSelector from "./FormElementSelector";
 
 type BaseProps = {
   label: string;
@@ -25,36 +24,9 @@ type TextareaProps = {
   inputProps?: never;
 };
 
-type CustomInputProps = BaseProps & (InputProps | TextareaProps);
+type Props = BaseProps & (InputProps | TextareaProps);
 
-type CustomFormElementProps = {
-  formikProps: FormikFieldProps;
-  inputProps: ChakraInputProps;
-  textareaProps: ChakraTextareaProps;
-  name: string;
-};
-
-const CustomFormElement: React.FC<CustomFormElementProps> = ({
-  formikProps,
-  name,
-  inputProps,
-  textareaProps,
-}) => {
-  if (Object.entries(textareaProps).length) {
-    return (
-      <Textarea
-        bg="white"
-        id={name}
-        {...formikProps.field}
-        {...textareaProps}
-      ></Textarea>
-    );
-  }
-
-  return <Input id={name} bg="white" {...formikProps.field} {...inputProps} />;
-};
-
-const CustomInput: React.FC<CustomInputProps> = ({
+const FormElement: React.FC<Props> = ({
   label,
   name,
   inputProps = {},
@@ -81,7 +53,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
                 )}
               </FormLabel>
 
-              <CustomFormElement
+              <FormElementSelector
                 formikProps={formikProps}
                 inputProps={inputProps}
                 textareaProps={textareaProps}
@@ -99,4 +71,4 @@ const CustomInput: React.FC<CustomInputProps> = ({
   );
 };
 
-export default CustomInput;
+export default FormElement;
