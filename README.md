@@ -1,12 +1,16 @@
 # Product Review and management demo app
 
+## Introduction
+
+> A customer feedback demo application for collecting reviews for a product after a successful purchase.
+
 [![CircleCI](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main.svg?style=svg)](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main)
 
 ## Table of contents
 
 - [Product Review and management demo app](#product-review-and-management-demo-app)
-  - [Table of contents](#table-of-contents)
   - [Introduction](#introduction)
+  - [Table of contents](#table-of-contents)
   - [Major Features](#major-features)
   - [Upcoming features](#upcoming-features)
   - [Preview](#preview)
@@ -21,10 +25,6 @@
     - [Precious OSSAI](#precious-ossai)
   - [Inspiration](#inspiration)
   - [Disclaimer](#disclaimer)
-
-## Introduction
-
-> A customer feedback demo application for collecting reviews for a product after a successful purchase.
 
 ## Major Features
 
