@@ -3,67 +3,90 @@ import {
   FormErrorMessage,
   FormLabel,
   Input,
-  InputProps,
+  InputProps as ChakraInputProps,
   Textarea,
-  TextareaProps,
+  TextareaProps as ChakraTextareaProps,
   Box,
 } from "@chakra-ui/react";
 import { Field, FieldProps as FormikFieldProps } from "formik";
 import React from "react";
 
-type FieldType = "text" | "textarea";
-type CustomInputFieldProps = TextareaProps | InputProps;
-
-interface Props {
+type BaseProps = {
   label: string;
   name: string;
-  fieldProps?: CustomInputFieldProps;
-  type?: FieldType;
-}
-const CustomInput: React.FC<Props> = ({ label, name, fieldProps, type }) => {
-  const pickFormField = ({
-    formikProps,
-  }: {
-    formikProps: FormikFieldProps | any;
-  }) => {
-    const { field } = formikProps;
-    switch (type) {
-      case "textarea":
-        return (
-          <Textarea
-            id={name}
-            name={name}
-            bg="white"
-            {...field}
-            {...fieldProps}
-          ></Textarea>
-        );
+};
 
-      default:
-        return (
-          <Input id={name} name={name} bg="white" {...field} {...fieldProps} />
-        );
-    }
-  };
+type InputProps = {
+  inputProps?: ChakraInputProps;
+  textareaProps?: never;
+};
+type TextareaProps = {
+  textareaProps: ChakraTextareaProps;
+  inputProps?: never;
+};
+
+type CustomInputProps = BaseProps & (InputProps | TextareaProps);
+
+type CustomFormElementProps = {
+  formikProps: FormikFieldProps;
+  inputProps: ChakraInputProps;
+  textareaProps: ChakraTextareaProps;
+  name: string;
+};
+
+const CustomFormElement: React.FC<CustomFormElementProps> = ({
+  formikProps,
+  name,
+  inputProps,
+  textareaProps,
+}) => {
+  if (Object.entries(textareaProps).length) {
+    return (
+      <Textarea
+        bg="white"
+        id={name}
+        {...formikProps.field}
+        {...textareaProps}
+      ></Textarea>
+    );
+  }
+
+  return <Input id={name} bg="white" {...formikProps.field} {...inputProps} />;
+};
+
+const CustomInput: React.FC<CustomInputProps> = ({
+  label,
+  name,
+  inputProps = {},
+  textareaProps = {},
+}) => {
   return (
     <>
       <Field name={name}>
         {(formikProps: FormikFieldProps) => {
           const { form } = formikProps;
           const isInvalid = !!(form.errors[name] && form.touched[name]);
+          const isRequired: boolean = !!(
+            inputProps.isRequired || textareaProps.isRequired
+          );
+
           return (
             <FormControl isInvalid={isInvalid}>
               <FormLabel mb="1" fontSize="sm" color="gray.500">
                 {label}
-                {fieldProps?.isRequired && (
+                {isRequired && (
                   <Box as="span" color="red">
                     *
                   </Box>
                 )}
               </FormLabel>
-              {pickFormField({
-                formikProps,
-              })}
+
+              <CustomFormElement
+                formikProps={formikProps}
+                inputProps={inputProps}
+                textareaProps={textareaProps}
+                name={name}
+              />
 
               <FormErrorMessage fontSize="xs" lineHeight="none">
                 {form.errors[name]}

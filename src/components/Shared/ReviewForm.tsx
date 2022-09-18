@@ -87,7 +87,7 @@ function ReviewForm({
 							<CustomInput
 								label="First Name"
 								name="firstname"
-								fieldProps={{
+								inputProps={{
 									type: "text",
 									isRequired: true,
 									maxLength: 40,
@@ -97,7 +97,7 @@ function ReviewForm({
 							<CustomInput
 								label="Last Name"
 								name="lastname"
-								fieldProps={{
+								inputProps={{
 									type: "text",
 									isRequired: true,
 									maxLength: 40,
@@ -108,7 +108,7 @@ function ReviewForm({
 						<CustomInput
 							label="Email"
 							name="email"
-							fieldProps={{
+							inputProps={{
 								type: "email",
 								isRequired: true,
 								placeholder: "Email address",
@@ -118,8 +118,7 @@ function ReviewForm({
 						<CustomInput
 							label="Comment"
 							name="comment"
-							type="textarea"
-							fieldProps={{
+							textareaProps={{
 								placeholder: "Please leave a feedback",
 								maxLength: 200,
 							}}
