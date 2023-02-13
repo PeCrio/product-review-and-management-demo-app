@@ -30,7 +30,7 @@ function Navbar() {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<>
-			<Box bg="brand.secondary" borderBottomWidth="thin">
+			{/* <Box bg="brand.secondary" borderBottomWidth="thin">
 				<Container maxW="container.xl" py="3" px="5">
 					<Flex align="center">
 						<InfoOutlineIcon fontSize="md" mt="1" mr="4" />
@@ -54,7 +54,7 @@ function Navbar() {
 						</Box>
 					</Flex>
 				</Container>
-			</Box>
+			</Box> */}
 			<Box borderBottomWidth="thin">
 				<Container maxW="container.xl" py="5" px="5">
 					<Flex justify="space-between" align="center">
@@ -71,7 +71,7 @@ function Navbar() {
 								fontSize={["xl", "xl", "2xl"]}
 								color="#0C1142"
 							>
-								review
+								OpenAI review
 								<Box as="span" fontWeight="thin">
 									.com
 								</Box>

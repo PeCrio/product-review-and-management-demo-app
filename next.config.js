@@ -6,6 +6,9 @@ module.exports = {
 		API_URL: process.env.API_URL,
 		MONGODB_URI: process.env.MONGODB_URI,
 		MONGODB_DB: process.env.MONGODB_DB,
+		AZURE_OPENAI_API_KEY : process.env.AZURE_OPENAI_API_KEY,
+		AZURE_OPENAI_API_URL : process.env.AZURE_OPENAI_API_URL,
+		AZURE_OPENAI_DEPLOYMENT_NAME : process.env.AZURE_OPENAI_DEPLOYMENT_NAME,
 	},
 
 	webpack: (config) => {

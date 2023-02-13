@@ -1,9 +1,9 @@
-export const AUTHOR_WEBSITE_URL = "https://ossaiprecious.com";
-export const AUTHOR_GITHUB_URL = "https://github.com/PeCrio";
+export const AUTHOR_WEBSITE_URL = "https://github.com/pierlag";
+export const AUTHOR_GITHUB_URL = "https://github.com/pierlag";
 export const PROJECT_DOCS_URL =
-	"https://github.com/PeCrio/product-review-and-management-demo-app";
-export const AUTHOR_EMAIL_URL = "mailto:theossaiprecious@gmail.com";
-export const AUTHOR_LINKEDIN_URL = "https://linkedin.com/in/ossaiprecious";
+	"https://github.com/pierlag/product-review-OpenAI-summary";
+export const AUTHOR_EMAIL_URL = "mailto:pierlag@microsoft.com";
+export const AUTHOR_LINKEDIN_URL = "https://linkedin.com/in/pierlag";
 
 export const developerDetails = [
 	{
