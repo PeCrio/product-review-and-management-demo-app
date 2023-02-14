@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> A customer feedback demo application for collecting reviews for a product after a successful purchase.
+>  A customer review demo application to collect product reviews after a successful purchase with an OpenAI GPT-3 analytics page to analyze natural language reviews.
 
 [![CircleCI](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main.svg?style=svg)](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main)
 
@@ -80,6 +80,10 @@ Below are the main tools and technologies used in this project:
 
    By default the `dev` script runs on port `3000`, if you have another application making use of that port on your machine, you can either terminate that process/application or use the `--port` flag where necessary to change the running port, kindly remember to update any relative script found on the project e.g. the `package.json` and `Dockerfile`.
 
+3. ## Create OpenAI tenant in Microsoft Azure (for openai page)
+  - Create Azure OpenAI tenant [step by step](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=rest-api)
+  - Deploy the model `text-davinci-003`
+
    ## Running locally
 
    ```bash
@@ -128,3 +132,4 @@ Below are the main tools and technologies used in this project:
 ## Disclaimer
 
 This is a demo project for proof of concept only.
+

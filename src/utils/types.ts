@@ -7,3 +7,8 @@ export interface ReviewI {
 	comment: string;
 	_id?: string;
 }
+
+export interface QueryI {
+	query: string;
+	resultQuery: string | undefined;
+}
