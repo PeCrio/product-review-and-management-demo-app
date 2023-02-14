@@ -1,0 +1,11 @@
+Review 5 starts : I've been playing this game for months and I'm still not bored of it! The graphics are great, the controls are easy to learn, and the levels are challenging. It's a great way to pass the time and I highly recommend it!
+Review 4 starts : This game is so much fun! The characters are so cute and the levels are so creative. I love the way the game keeps me on my toes and the rewards are great. Highly recommend
+Review 5 starts : This game is awesome! The graphics are top-notch and the gameplay is smooth. The levels are challenging and the rewards are great. I can't stop playing it and I highly recommend it!
+Review 2 starts : This game was incredibly boring and the graphics were terrible. I was really disappointed with the overall experience.
+Review 1 starts : The controls were clunky and the levels were too easy. I wouldn't recommend this game to anyone.
+
+What is the trend of my application?
+OpenAI answer : The trend of your application appears to be positive, as all of the reviews are either 4 or 5 stars. The reviews praise the game for its graphics, controls, levels, and rewards.
+
+Why does the application have some bad reviews?
+The application may have some bad reviews because the game may not have lived up to the expectations of some players. Some players may have found the controls clunky, the levels too easy, or the graphics to be of poor quality. Additionally, some players may have found the game to be too repetitive or boring.
