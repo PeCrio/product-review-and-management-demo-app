@@ -2,7 +2,9 @@
 
 ## Introduction
 
-> A customer feedback demo application for collecting reviews for a product after a successful purchase and request analytics power by OpenAI GPT-3.
+>  A customer review demo application to collect product reviews after a successful purchase with an OpenAI GPT-3 analytics page to analyze natural language reviews.
+
+[![CircleCI](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main.svg?style=svg)](https://circleci.com/gh/PeCrio/product-review-and-management-demo-app/tree/main)
 
 ## Table of contents
 
@@ -20,6 +22,7 @@
   - [Viewing test coverage](#viewing-test-coverage)
   - [Using Docker](#using-docker)
   - [Author](#author)
+    - [Precious OSSAI](#precious-ossai)
   - [Inspiration](#inspiration)
   - [Disclaimer](#disclaimer)
 
@@ -61,15 +64,10 @@ Below are the main tools and technologies used in this project:
 
 ## Getting Started
 
-0. ## Create OpenAI tenant in Microsoft Azure
-  - Create Azure OpenAI tenant [step by step](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=rest-api)
-  - Deploy model `text-davinci-003`
-
 1. ## Setup environment variables
    - Create a `.env` file at the root directory of the project
    - Copy the content of the `.env.example` file onto it
    - Update the values as required. e.g. `API_URL=http://localhost:3000/api`
-   - Update OpenAI values e.g. `AZURE_OPENAI_API_URL=https://xxx.openai.azure.com/`
 2. ## Development and Testing
 
    ## Notes
@@ -81,6 +79,10 @@ Below are the main tools and technologies used in this project:
    - `ls` command to show the content of your current directory
 
    By default the `dev` script runs on port `3000`, if you have another application making use of that port on your machine, you can either terminate that process/application or use the `--port` flag where necessary to change the running port, kindly remember to update any relative script found on the project e.g. the `package.json` and `Dockerfile`.
+
+3. ## Create OpenAI tenant in Microsoft Azure (for openai page)
+  - Create Azure OpenAI tenant [step by step](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/quickstart?pivots=rest-api)
+  - Deploy the model `text-davinci-003`
 
    ## Running locally
 
@@ -104,7 +106,7 @@ Below are the main tools and technologies used in this project:
    $ open coverage/lcov-report/index.html
    ```
 
-   ## Using Docker (not tested with OpenAI)
+   ## Using Docker
 
    > Before proceeding with the below command, ensure [Docker](https://docs.docker.com/get-docker/) is installed and running on your machine.
 
@@ -115,10 +117,19 @@ Below are the main tools and technologies used in this project:
 
 ## Author
 
-### Inspiration
+### Precious OSSAI
 
-Thanks to PeCrio project is a forck from [ossaiprecious](https://www.github.com/PeCrio)
+- [LinkedIn](https://www.linkedin.com/in/ossaiprecious)
+- [Website](https://www.ossaiprecious.com)
+- [GitHub](https://www.github.com/PeCrio)
+- [Dribbble](https://www.dribbble.com/PeCrio)
+- [Email](mailto:theossaiprecious@gmail.com)
+
+## Inspiration
+
+- [checkout.com](https://www.checkout.com)
 
 ## Disclaimer
 
 This is a demo project for proof of concept only.
+
