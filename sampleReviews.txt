@@ -8,4 +8,4 @@ What is the trend of my application?
 OpenAI answer : The trend of your application appears to be positive, as all of the reviews are either 4 or 5 stars. The reviews praise the game for its graphics, controls, levels, and rewards.
 
 Why does the application have some bad reviews?
-The application may have some bad reviews because the game may not have lived up to the expectations of some players. Some players may have found the controls clunky, the levels too easy, or the graphics to be of poor quality. Additionally, some players may have found the game to be too repetitive or boring.
+OpenAI answer : The application may have some bad reviews because the game may not have lived up to the expectations of some players. Some players may have found the controls clunky, the levels too easy, or the graphics to be of poor quality. Additionally, some players may have found the game to be too repetitive or boring.
